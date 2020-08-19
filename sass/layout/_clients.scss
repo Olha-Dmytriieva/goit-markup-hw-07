@@ -1,0 +1,74 @@
+/*наши постоянные клиенты*/
+
+.our-clients-section{
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.our-clients-header{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.67x;
+    color: $header-color;
+    letter-spacing: 0.03em;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+    
+}
+
+
+.our-clients-list .link:hover,
+.our-clients-list .link:focus{
+    color: $accent-color;
+    transition: $transition;
+}
+
+
+.client-svg{
+    fill: #AFB1B8;
+    
+}
+
+.client-link{
+    display: flex;
+    background-color: #fff;
+    width: 170px;
+    height: 90px;
+    border: 1px solid  #AFB1B8;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    &:hover{
+        background-color: #fff;
+        border: 1px solid #2196F3;
+        transition: $transition;
+    
+        &.client-svg{
+            fill: #2196F3;
+            transition: $transition;
+        }
+    
+    }
+}
+
+
+
+.our-clients-list{
+
+    padding-left: 0;
+
+    li{
+        text-decoration: none;
+        list-style-type: none;
+    }
+    
+    .client-picture{
+        margin-right: 30px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+} 
