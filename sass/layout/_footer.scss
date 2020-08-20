@@ -1,17 +1,13 @@
 
 /*подвал*/
 
- 
-.footer{
-    background-color: #2F303A;
-    display: flex;
-    
-    a{
-    text-decoration: none;
-    }
 
-    .container{
-        display: flex;
+.footer{
+    display: flex;
+    background-color: #2F303A;
+
+    a{
+        text-decoration: none;
     }
 
     .second-part-of-logo{
@@ -23,11 +19,15 @@
         color:#fff;
         letter-spacing: 0.03em;
     }
+}
 
-    .logo-link-footer{
-        padding-top: 60px;
-        margin-bottom: 20px;
-    }
+.footer >.container{
+    display: flex;
+}
+
+.logo-link-footer{
+    padding-top: 60px;
+    margin-bottom: 20px;
 }
 
 .footer-first-part{
@@ -45,11 +45,12 @@
     color: #fff;
     font-style:normal;
     letter-spacing: 0.03em;
+   
 }
 
-.footer-contacts{
-
- .footer-contact{
+.footer-contacts { 
+    
+    .footer-contact{
     display: block;
     padding-right: 0;
     margin-top: 9px;
@@ -58,9 +59,8 @@
     line-height: 1.7; 
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: 0.03em;
-    }
 }
-
+}
 
 
 .join-us-link >.join-us-header,
@@ -89,30 +89,33 @@
         background-color: $accent-color;
         transition: $transition;
     }
+    
 }
+
 
 .join-us {
     text-decoration: none;
     list-style-type: none;
      padding-left: 0;
-
-     &li:not(:last-child){
-   
-        padding-right: 10px;
-    }
-
-    .join-us-header{
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: 0.03em;
-        margin-top: 72px;
-    }
 }
 
+
+
+.join-us >li:not(:last-child){
+   
+    padding-right: 10px;
+}
+
+.join-us-header{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.03em;
+    margin-top: 72px;
+}
 
 .footer-modal-form{
    padding-left: 94px;
@@ -128,11 +131,16 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background: #2F303A;
+    box-sizing: border-box;
+    padding-left: 16px;
+    color: #fff;
+
+    &:focus{
+        outline: none;
+    }
+    
 }
 
-.input-footer::placeholder{
-    padding: 16px;
-}
 
 .footer-button-modal{
     font-weight: bold;
@@ -153,10 +161,12 @@
     align-items: center;
     justify-content: center;
     margin-left: 12px;  
+    
+}
 
-    &:not(:first-child){
-        display: flex;
-    }
+.footer-modal:not(:first-child){
+    display: flex;
+    
     
 }
 

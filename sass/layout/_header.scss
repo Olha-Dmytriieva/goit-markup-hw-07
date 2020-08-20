@@ -31,7 +31,6 @@
 .header{
     height: 80px;
     border-bottom: 1px solid #ECECEC;
-
     a {
         text-decoration: none;
         font-weight: 500;
@@ -53,49 +52,49 @@
 
  }
 
+
  .navigation-items {
     list-style-type: none;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
-    display: flex;
-
-    a {
-        color:$header-color;
-    }
-
-    :not(:last-child){
-        margin-right: 50px;
-    }
-
-    .link {
-        display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-
-    .link:hover,
-    .link:focus{
-    color: $accent-color;
-    transition: $transition;
-    
-}
-
  }
  
 .portfolio-header{
     border-bottom:  1px solid #ECECEC;
 }
- 
 
-.navigation .current{
-    color: $accent-color;
+
+ .navigation-items{
+     & :not(:last-child){
+    margin-right: 50px;
 }
 
-.current{
+    .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+ }
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+
+.navigation {
+
+    .link:hover,
+    .link:focus{
+    color: $accent-color;
+    transition: $transition;}
+
+ .current{
     position: relative;
-    
-    &:after {
+    color: $accent-color;
+
+    &::after {
         position: absolute;
         display: block;
         width: 100%;
@@ -108,40 +107,53 @@
         
     }
     
-}
-
- 
-
-.contact:hover .header-svg,
-.contact:focus .header-svg{
-    fill: $accent-color;
-    transition: $transition;
-
-    &.header-svg{
-        fill: #AFB1B8;
-        margin-right: 10px;
     }
 }
+
+
+.navigation-items{
+    display: flex;
+
+    a {
+        color:$header-color;
+    }
+}
+
+
 
 .contact-info{
     padding-left: 305px;
 
-    :hover,
-    :focus{ 
+    a{
+        color:$subheader-color;
+    }
+
+    .contact{
+        margin-right: 30px;  
+        padding-top: 32px;
+        padding-bottom: 32px; 
+        
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+}
+
+.header-svg{
+    fill: #AFB1B8;
+    margin-right: 10px;
+}
+
+.contact-info :hover,
+.contact-info :focus{ 
     color: $accent-color;
     transition: $transition;
 
-    a{
-        color:$subheader-color
-    }
-    
-     .contact{
-        margin-right: 30px;  
-        padding-top: 32px;
-        padding-bottom: 32px;     
-    } 
-    
-    .contact:last-child{
-        margin-right: 0px;
-    }
+    .header-svg,
+    .header-svg{
+    fill: $accent-color;
+    transition: $transition;
 }
+}
+
+ 

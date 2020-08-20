@@ -1,4 +1,3 @@
-
 /*our team*/
 .wrapper{
     background-color: #F5F4FA;
@@ -29,18 +28,22 @@
 .our-team-list {
     padding-left: 0px;
     margin-top: 0; 
-    
+
     .our-team-member:not(:last-child){
         margin-right: 30px;
     }
 }
 
+.our-team-member,
+.our-team-position,
+.our-team-social-links{
+   text-align: center;
+}
 
 .our-team-member{
     background-color: #fff;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 0px 0px 4px 4px;
-    text-align: center;
 }
 
 .our-team-name{
@@ -60,7 +63,43 @@
     letter-spacing: 0.03em;
     margin-top: 0px;
     margin-bottom: 16px;
-    text-align: center;
+}
+.our-team-social-links {
+
+    padding-top: 16px;
+    padding-bottom: 24px;
+    justify-content: center;
+
+    li{     
+        margin-right: 10px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    
+    .team-links {
+    display: flex;
+    background-color:#fff;  
+    border-radius: 50%;
+    width: 44px;
+    height:44px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover,
+    &:focus{
+    background-color:$accent-color; 
+    color: #fff;
+    transition: $transition;
+
+    .team-svg,
+    .team-svg {
+       fill: #FFFFFF;
+       transition: $transition;
+   }
+}
+}
 }
 
 .team-svg{
@@ -68,40 +107,8 @@
     transition: $transition;
 }
 
-.team-links:hover,
-.team-links:focus{
-    background-color:$accent-color; 
-    color: #fff;
-    transition: $transition;
 
-    &.team-svg,
-    &.team-svg {
-    fill: #FFFFFF;
-    transition: $transition;
-}
 
-.our-team-social-links {
-    padding-top: 16px;
-    padding-bottom: 24px;
-    justify-content: center;
-    text-align: center;
 
-    li{     
-        margin-right: 10px;
 
-        &:last-child{
-            margin-right: 0;
-        }
-    }
 
-    .team-links {
-        display: flex;
-        background-color:#fff;  
-        border-radius: 50%;
-        width: 44px;
-        height:44px;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-    }
-}
